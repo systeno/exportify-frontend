@@ -1,12 +1,12 @@
 <template>
   <div class="nav-bar">
     <nav class="navigators">
-      <NavButton class="nav-item" @click="goto('Playlists')">Playlists</NavButton>
-      <NavButton class="nav-item" @click="goto('Albums')">Albums</NavButton>
-      <NavButton class="nav-item" @click="goto('Artists')">Artists</NavButton>
-      <NavButton class="nav-item" @click="goto('Songs')">Songs</NavButton>
-      <NavButton class="nav-item" @click="goto('Libraries')">Libraries</NavButton>
-      <NavButton class="nav-item" @click="goto('User')">User</NavButton>
+      <NavButton class="nav-item" @nav-btn-click="goto('Playlists')">Playlists</NavButton>
+      <NavButton class="nav-item" @nav-btn-click="goto('Albums')">Albums</NavButton>
+      <NavButton class="nav-item" @nav-btn-click="goto('Artists')">Artists</NavButton>
+      <NavButton class="nav-item" @nav-btn-click="goto('Songs')">Songs</NavButton>
+      <NavButton class="nav-item" @nav-btn-click="goto('Libraries')">Libraries</NavButton>
+      <NavButton class="nav-item" @nav-btn-click="goto('User')">User</NavButton>
     </nav>
 
     <nav class="actions">
@@ -20,7 +20,6 @@
 import NavButton from "@/components/NavButton";
 
 export default {
-  name: "NavBar",
   components: { NavButton },
   methods: {
     goto(location) {

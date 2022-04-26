@@ -2,19 +2,18 @@
   <div class="box">
     <h2 :class="{ title: true, empty: !warning }">{{ title }}</h2>
     <div v-if="warning" class="warning">{{ warning }}</div>
-    <div class="text"><slot></slot></div>
+    <div class="text"><slot /></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "InfoBox",
   props: {
     title: {
       type: String,
       required: true,
     },
-    warning: String,
+    warning: String("")
   },
 };
 </script>

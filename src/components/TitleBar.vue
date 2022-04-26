@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  name: "TitleBar",
   methods: {
     goHome() {
       this.$router.push({ name: "Home" });

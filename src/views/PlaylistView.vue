@@ -5,32 +5,28 @@
 </template>
 
 <script>
-import LibraryView from "/src/layout/LibraryView";
+import LibraryView from "@/layout/LibraryView";
 import axios from "axios";
 
 export default {
-  name: "PlaylistView",
   components: {
-    LibraryView
+    LibraryView,
   },
   data() {
     return {
-      todos: null
+      todos: {},
     };
   },
   beforeMount() {
     this.getPlaylists();
   },
   methods: {
-    async login() {
-      window.location.href = "localhost:4001/";
-    },
-    getPlaylists: function() {
+    getPlaylists: function () {
       axios
         .get("https://jsonplaceholder.typicode.com/todos")
-        .then(response => (this.todos = response));
-    }
-  }
+        .then((response) => (this.todos = response));
+    },
+  },
 };
 </script>
 

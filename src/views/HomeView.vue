@@ -3,7 +3,7 @@
     <div class="login-top">
       <TitleBar />
       <div class="greeting">Export and back up your Spotify library.</div>
-      <SpotifyButton @click="login">Login With Spotify</SpotifyButton>
+      <SpotifyButton @spotify-btn-click="login">Login With Spotify</SpotifyButton>
     </div>
 
     <div class="login-bottom">
@@ -17,10 +17,7 @@
         Since this app is still in early development, the format of the
         downloaded data may change over time.
       </InfoBox>
-      <InfoBox
-        title="Backup your library"
-        warning="Warning: experimental feature"
-      >
+      <InfoBox title="Backup your library" warning="Warning: experimental feature">
         <p class="mt0">
           Exportify also gives you the ability to safe your library online. It
           is connected to your Spotify ID, so you dont need an additional
@@ -51,30 +48,29 @@
         efficitur ut est.
       </InfoBox>
     </div>
-    <Footer></Footer>
+    <Footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import SpotifyButton from "@/components/SpotifyButton.vue";
-import Footer from "@/components/Footer";
+import Footer from "@/components/TheFooter";
 import InfoBox from "@/components/InfoBox";
 import TitleBar from "@/components/TitleBar";
 
 export default {
-  name: "HomeView",
   components: {
     TitleBar,
     InfoBox,
     Footer,
-    SpotifyButton
+    SpotifyButton,
   },
   methods: {
     async login() {
-      window.location.href = "localhost:4001/";
-    }
-  }
+      console.log("login")
+    },
+  },
 };
 </script>
 
@@ -108,6 +104,7 @@ $top-size: 700px;
   background: var(--bg-image-color);
   background-size: 400% 400%;
   animation: gradient 120s linear infinite;
+
   .greeting {
     align-items: center;
     font-size: fonts.$h1_size;

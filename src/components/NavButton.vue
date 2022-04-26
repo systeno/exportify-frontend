@@ -1,17 +1,13 @@
 <template>
-  <button class="nav-button" @click="handleClick"><slot /></button>
+  <button class="nav-button" @click="$emit('nav-btn-click')">
+    <slot />
+  </button>
 </template>
 
 <script>
 export default {
-  name: "NavButton",
-  methods: {
-    handleClick(evt) {
-      this.$emit("click", evt);
-    }
-  }
-
-}
+  emits: ["nav-btn-click"]
+};
 </script>
 
 <style scoped lang="scss">
@@ -22,7 +18,7 @@ export default {
   background: var(--navbutton-bg-color);
   cursor: pointer;
   color: var(--navbutton-text-color);
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   box-sizing: border-box;
   font-family: fonts.$font-stack;
   font-size: fonts.$nav_button_size;

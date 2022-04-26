@@ -1,28 +1,27 @@
 <template>
   <div class="view">
-    <TitleBar></TitleBar>
-    <NavBar></NavBar>
+    <TitleBar />
+    <NavBar />
     <div class="content">
       <div>
-        <slot></slot>
+        <slot />
       </div>
-      <Footer></Footer>
+      <Footer />
     </div>
   </div>
 </template>
 
 <script>
 import TitleBar from "@/components/TitleBar";
-import Footer from "@/components/Footer";
+import Footer from "@/components/TheFooter";
 import NavBar from "@/components/NavBar";
 
 export default {
-  name: "LibraryView",
   components: {
     NavBar,
     TitleBar,
-    Footer
-  }
+    Footer,
+  },
 };
 </script>
 

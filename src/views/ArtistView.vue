@@ -1,14 +1,15 @@
 <template>
-  <div></div>
+  <LibraryView>
+    <div> test </div>
+  </LibraryView>
 </template>
 
 <script>
-
+import LibraryView from "@/layout/LibraryView";
 
 export default {
-  name: "ArtistView",
   components: {
-
+    LibraryView
   }
 };
 </script>

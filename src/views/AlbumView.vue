@@ -1,13 +1,14 @@
 <template>
-  <div class="home">BackgroundImage></div>
+  <LibraryView />
 </template>
 
 <script>
 // @ is an alias to /src
+import LibraryView from "@/layout/LibraryView";
 
 export default {
-  name: "AlbumView",
   components: {
+    LibraryView
   },
 };
 </script>

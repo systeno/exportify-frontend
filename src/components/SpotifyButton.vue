@@ -1,16 +1,17 @@
 <template>
-  <button class="spotify-button" @click="handleClick">Login With Spotify</button>
+  <button class="spotify-button" @click="handleClick">
+    Login With Spotify
+  </button>
 </template>
 
 <script>
 export default {
-  name: "SpotifyButton",
+  emits: ["spotify-btn-click"],
   methods: {
     handleClick(evt) {
-      this.$emit("click", evt);
-    }
-  }
-
+      this.$emit("spotify-btn-click", evt);
+    },
+  },
 };
 </script>
 
@@ -23,7 +24,7 @@ export default {
   background-color: var(--button-bg-color);
   cursor: pointer;
   color: var(--button-text-color);
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   box-sizing: border-box;
   font-family: fonts.$font-stack;
   font-size: fonts.$button_size;
@@ -42,7 +43,7 @@ export default {
 }
 
 .spotify-button:hover {
-  background-color:   var(--button-hover-bg-color);
+  background-color: var(--button-hover-bg-color);
   color: var(--button-text-color);
 }
 </style>
