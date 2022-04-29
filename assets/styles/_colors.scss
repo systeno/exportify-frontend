@@ -1,0 +1,30 @@
+@import "assets/styles/theme_spotify";
+
+:root {
+  /--main-bg-color: #{$main-bg-color};
+  --main-text-color: #{$main-text-color};
+
+  --title-bg-color: #{$title-bg-color};
+  --title-font-color: #{$title-font-color};
+  --title-hover-font-color: #{$title-hover-font-color};
+
+  --bg-image-color: #{$bg-image-color};
+  --greeting-color:  #{$greeting-color};
+  --button-bg-color: #{$button-bg-color};
+  --button-hover-bg-color: #{$button-hover-bg-color};
+  --button-text-color: #{$button-text-color};
+
+  --second-bg-color: #{$second-bg-color};
+  --text-box-bg-color: #{$text-box-bg-color};
+  --text-box-title-color: #{$text-box-title-color};
+  --text-box-warning-color: #{$text-box-warning-color};
+  --text-box-text-color: #{$text-box-text-color};
+
+  --navbar-bg-color: #{$navbar-bg-color};
+  --navbutton-bg-color: #{$navbutton-bg-color};
+  --navbutton-hover-bg-color: #{$navbutton-hover-bg-color};
+  --navbutton-text-color: #{$navbutton-text-color};
+
+  --footer-bg-color: #{$footer-bg-color};
+  --footer-text-color: #{$footer-text-color};
+}
