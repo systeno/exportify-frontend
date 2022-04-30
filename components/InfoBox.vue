@@ -16,51 +16,19 @@ export default {
 </script>
 
 <template>
-  <div class="box">
-    <h2 :class="{ title: true, empty: !warning }">{{ title }}</h2>
-    <div v-if="warning" class="warning">{{ warning }}</div>
-    <div class="text">
-      <slot />
-    </div>
+  <div class="box has-background-grey-darker">
+    <h2 class="title " :class="{ 'mb-6': !warning }">{{ title }}</h2>
+    <div v-if="warning" class="has-text-danger is-size-6">{{ warning }}</div>
+    <slot />
   </div>
 </template>
 
 <style scoped lang="scss">
 
-.box {
-  margin: 50px;
-  width: 350px;
-  height: 400px;
-  overflow: hidden;
-  //border-radius: $border_radius;
-  background-color: var(--text-box-bg-color);
-  padding-left: 20px;
-  padding-right: 20px;
+  .box {
+    width: 370px;
 
-  .title {
-    color: var(--text-box-title-color);
-    font-weight: 700;
-    //font-size: $h2_size;
-    margin-bottom: 0;
-    text-align: center;
+    height: 400px;
+    overflow: hidden;
   }
-  .empty {
-    margin-bottom: 20px;
-  }
-
-  .warning {
-    color: var(--text-box-warning-color);
-    font-weight: 600;
-    //font-size: $h3_size;
-    margin-bottom: 0;
-    margin-top: 0;
-    min-height: 20px;
-  }
-
-  .text {
-    color: var(--text-box-text-color);
-    //font-size: $body_size;
-    text-align: justify;
-  }
-}
 </style>

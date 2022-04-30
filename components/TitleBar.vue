@@ -3,48 +3,44 @@
 </script>
 
 <script>
+export default {
+  data() {
+    return {
+      showNav: false
+    }
+  }
+}
 </script>
 
 <template>
   <div>
-    <header class="d-flex py-3 text-light bg-dark">
-      <NuxtLink to="/" class="ms-4 fs-4 me-md-auto d-flex align-items-center text-light text-decoration-none">
-        Exportify
-      </NuxtLink>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <NuxtLink to="/" class="navbar-item is-size-3">
+          Exportify
+        </NuxtLink>
 
-      <ul class="nav nav-pills">
-        <li class="nav-item"><NuxtLink class="nav-link active" to="/">Home</NuxtLink></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-      </ul>
-    </header>
+        <a role="button" class="navbar-burger" @click="showNav = !showNav" :class="{ 'is-active': showNav }"
+           aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showNav }">
+        <div class="navbar-start"></div>
+        <div class="navbar-end">
+          <NuxtLink class="navbar-item" to="/">Home</NuxtLink>
+          <NuxtLink class="navbar-item" to="#">Features</NuxtLink>
+          <NuxtLink class="navbar-item" to="#">FAQs</NuxtLink>
+          <NuxtLink class="navbar-item" to="#">About</NuxtLink>
+        </div>
+      </div>
+    </nav>
   </div>
 </template>
 
 <style scoped lang="scss">
 
-.title-bar {
-  position: fixed;
-  //height: $title_bar;
-  left: 0;
-  right: 0;
-  top: 0;
-  text-align: center;
-  background-color: var(--title-bg-color);
-  z-index: 2;
-
-  .title {
-    margin-top: 0;
-   // font-size: $title_size;
-    //font-family: $title_font_stack;
-    color: var(--title-font-color);
-    text-decoration: none;
-  }
-  .title:hover {
-    color: var(--title-hover-font-color);
-    cursor: pointer;
-  }
-}
 </style>

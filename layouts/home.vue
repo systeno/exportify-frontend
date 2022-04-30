@@ -1,57 +1,21 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="tile is-ancestor">
-    <div class="tile">
-      <TitleBar />
+  <div class="is-flex is-flex-direction-column vh-100">
+    <TitleBar></TitleBar>
+    <div class="min-vh-50 has-background-grey-dark box">
       <slot name="top"></slot>
     </div>
-    <div class="login-bottom">
+    <div class="container">
       <slot name="bottom"></slot>
     </div>
-    <TheFooter />
+    <div class="mt-auto">
+      <TheFooter class="mt-5"></TheFooter>
+    </div>
+
   </div>
 </template>
 
 <style scoped lang="scss">
 
-$top-size: 700px;
-
-.home {
-  display: flex;
-  flex-direction: column;
-}
-
-.login-top {
-  @keyframes gradient {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 100% 100%;
-    }
-    100% {
-      background-position: 0 0;
-    }
-  }
-  height: $top-size;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: var(--bg-image-color);
-  background-size: 400% 400%;
-  animation: gradient 120s linear infinite;
-}
-
-.login-bottom {
-  display: flex;
-  flex: 1;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  flex-direction: row;
-  z-index: 1;
-  min-height: calc(100vh - #{$top-size});
-  background-color: var(--second-bg-color);
-}
 </style>

@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <aside class="menu is-flex is-flex-direction-column is-justify-content-flex-start">
+  <aside class="section pb-1 menu is-flex is-flex-direction-column is-justify-content-flex-start has-background-grey-dark">
       <NuxtLink to="/" class="is-size-4">Exportify</NuxtLink>
       <hr class="is-size-6 has-background-grey-lighter">
       <p class="menu-label is-size-6">
@@ -50,20 +50,6 @@
       </div>
     </div>
   </aside>
-  <!--<nav class="navigators">
-    <NavButton class="nav-item" goto="/playlists">Playlists</NavButton>
-    <NavButton class="nav-item" goto="/albums">Albums</NavButton>
-    <NavButton class="nav-item" goto="/artists">Artists</NavButton>
-    <NavButton class="nav-item" goto="/songs">Songs</NavButton>
-    <NavButton class="nav-item" goto="/libraries">Libraries</NavButton>
-    <NavButton class="nav-item" goto="/user">User</NavButton>
-  </nav>
-
-  <nav class="actions">
-    <NavButton class="nav-item">Download Library</NavButton>
-    <NavButton class="nav-item">Save To Database</NavButton>
-  </nav>-->
-
 </template>
 
 <style scoped lang="scss">

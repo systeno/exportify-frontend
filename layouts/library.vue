@@ -5,13 +5,13 @@
 <template>
   <div class="tile is-vertical vh-100">
     <div class="columns columns vh-100">
-      <NavBar class=" column section"></NavBar>
+      <NavBar class=" column"></NavBar>
       <div class="column is-four-fifths section">
         <slot />
       </div>
     </div>
 
-    <TheFooter class="tile heig"> </TheFooter>
+    <TheFooter class="tile"> </TheFooter>
   </div>
 </template>
 
