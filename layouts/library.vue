@@ -3,30 +3,23 @@
 <script></script>
 
 <template>
-  <div class="view">
-    <TitleBar />
-    <NavBar />
-    <div class="content">
-      <div class="slot"><slot /></div>
-      <TheFooter />
+  <div class="tile is-vertical vh-100">
+    <div class="columns columns vh-100">
+      <NavBar class=" column section"></NavBar>
+      <div class="column is-four-fifths section">
+        <slot />
+      </div>
     </div>
+
+    <TheFooter class="tile heig"> </TheFooter>
   </div>
 </template>
 
 <style scoped lang="scss">
-@import "assets/styles/global";
 
-.content {
-  min-height: 100vh;
-  display: flex;
-  padding-top: $title_bar;
-  padding-left: $side_bar;
-  flex-direction: column;
-  justify-content: space-between;
-
-  .slot {
-    margin: 5vh;
-  }
+.slot {
+  margin: 5vh;
 }
+
 
 </style>

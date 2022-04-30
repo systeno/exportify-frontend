@@ -26,14 +26,13 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@import "assets/styles/global";
 
 .box {
   margin: 50px;
   width: 350px;
   height: 400px;
   overflow: hidden;
-  border-radius: $border_radius;
+  //border-radius: $border_radius;
   background-color: var(--text-box-bg-color);
   padding-left: 20px;
   padding-right: 20px;
@@ -41,7 +40,7 @@ export default {
   .title {
     color: var(--text-box-title-color);
     font-weight: 700;
-    font-size: $h2_size;
+    //font-size: $h2_size;
     margin-bottom: 0;
     text-align: center;
   }
@@ -52,7 +51,7 @@ export default {
   .warning {
     color: var(--text-box-warning-color);
     font-weight: 600;
-    font-size: $h3_size;
+    //font-size: $h3_size;
     margin-bottom: 0;
     margin-top: 0;
     min-height: 20px;
@@ -60,7 +59,7 @@ export default {
 
   .text {
     color: var(--text-box-text-color);
-    font-size: $body_size;
+    //font-size: $body_size;
     text-align: justify;
   }
 }

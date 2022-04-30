@@ -53,13 +53,12 @@
 </template>
 
 <style scoped lang="scss">
-@import "assets/styles/global";
 
 
 .greeting {
     align-items: center;
-    font-size: $h1_size;
-    font-family: $title_font_stack;
+    //font-size: $h1_size;
+    //font-family: $title_font_stack;
     color: var(--greeting-color);
   }
 

@@ -1,8 +1,8 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="home">
-    <div class="login-top">
+  <div class="tile is-ancestor">
+    <div class="tile">
       <TitleBar />
       <slot name="top"></slot>
     </div>
@@ -14,7 +14,6 @@
 </template>
 
 <style scoped lang="scss">
-@import "assets/styles/global";
 
 $top-size: 700px;
 

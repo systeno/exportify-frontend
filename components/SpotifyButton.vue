@@ -16,7 +16,6 @@ const props = defineProps({
 </template>
 
 <style scoped lang="scss">
-@import "assets/styles/global";
 
 .spotify-button {
   background-color: var(--button-bg-color);
@@ -24,9 +23,9 @@ const props = defineProps({
   color: var(--button-text-color);
   transition-duration: 0.3s;
   box-sizing: border-box;
-  font-family: $font-stack;
-  font-size: $button_size;
-  font-weight: $thick;
+  //font-family: $font-stack;
+  //font-size: $button_size;
+  //font-weight: $thick;
   letter-spacing: 2px;
   text-align: center;
   vertical-align: middle;
