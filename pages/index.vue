@@ -1,5 +1,9 @@
 <script setup>
 import infoBoxes from "assets/content/info-boxes.json"
+
+const redirectUri = encodeURI("http://localhost:3000/library/playlists")
+const authorize = `http://localhost:8080/authorize?redirect_uri=${redirectUri}`
+
 </script>
 
 <template>
@@ -7,7 +11,7 @@ import infoBoxes from "assets/content/info-boxes.json"
     <template #top>
       <div class="is-flex is-flex-direction-column is-justify-content-center h-100">
         <div class="title has-text-centered">Export and back up your Spotify library.</div>
-        <SpotifyButton goto="/playlists" class="mx-auto">Login With Spotify</SpotifyButton>
+        <SpotifyButton :goto="authorize" class="mx-auto">Login With Spotify</SpotifyButton>
       </div>
     </template>
     <template #bottom>

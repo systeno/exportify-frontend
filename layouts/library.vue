@@ -1,25 +1,24 @@
 <script lang="ts" setup></script>
 
-<script></script>
+<script>
+
+</script>
 
 <template>
-  <div class="tile is-vertical vh-100">
-    <div class="columns columns vh-100">
-      <NavBar class=" column"></NavBar>
-      <div class="column is-four-fifths section">
-        <slot />
+
+  <div class="is-flex is-flex-direction-column vh-100">
+    <div class="is-flex">
+      <SideBar class="is-flex-shrink-1"></SideBar>
+      <div class="section">
+        <slot/>
       </div>
     </div>
 
-    <TheFooter class="tile"> </TheFooter>
+    <TheFooter></TheFooter>
+
   </div>
 </template>
 
 <style scoped lang="scss">
-
-.slot {
-  margin: 5vh;
-}
-
 
 </style>

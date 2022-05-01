@@ -1,8 +1,12 @@
 <script lang="ts" setup></script>
 
+<script>
+
+</script>
+
 <template>
   <div class="is-flex is-flex-direction-column vh-100">
-    <TitleBar></TitleBar>
+    <TopBar></TopBar>
     <div class="min-vh-50 has-background-grey-dark box">
       <slot name="top"></slot>
     </div>

@@ -4,38 +4,29 @@
 </script>
 
 <template>
-  <aside class="section pb-1 menu is-flex is-flex-direction-column is-justify-content-flex-start has-background-grey-dark">
+  <aside class="has-background-grey-dark section menu is-flex is-flex-direction-column fixed vh-100" >
+
       <NuxtLink to="/" class="is-size-4">Exportify</NuxtLink>
+
       <hr class="is-size-6 has-background-grey-lighter">
-      <p class="menu-label is-size-6">
-        Library
-      </p>
+
+      <p class="menu-label is-size-6">Library</p>
+
       <ul class="menu-list is-size-6">
-        <li>
-          <NuxtLink to="/albums">Albums</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/artists">Artist</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/libraries">Libraries</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/playlists">Playlists</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/songs">Songs</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/user">User</NuxtLink>
-        </li>
+        <li><NuxtLink to="/library/albums">Albums</NuxtLink></li>
+        <li><NuxtLink to="/library/artists">Artist</NuxtLink></li>
+        <li><NuxtLink to="/library/libraries">Libraries</NuxtLink></li>
+        <li><NuxtLink to="/library/playlists">Playlists</NuxtLink></li>
+        <li><NuxtLink to="/library/songs">Songs</NuxtLink></li>
+        <li><NuxtLink to="/library/user">User</NuxtLink></li>
       </ul>
-    <div class="mt-auto">
-      <hr class="is-size-6 has-background-grey-lighter">
+
+      <hr class="mt-auto is-size-6 has-background-grey-lighter">
+
       <div class="dropdown is-up is-hoverable">
         <NuxtLink to="#" class="button" aria-haspopup="true" aria-controls="dropdown-user">
           <figure class="image is-32x32 mr-2">
-            <img class="is-rounded" src="https://github.com/systeno.png">
+            <img class="is-rounded" src="https://github.com/systeno.png" alt="">
           </figure>
           <strong>UserName</strong>
         </NuxtLink>
@@ -47,11 +38,14 @@
             <NuxtLink class="dropdown-item" to="#">Sign out</NuxtLink>
           </div>
         </div>
+
       </div>
-    </div>
   </aside>
 </template>
 
 <style scoped lang="scss">
-
+.fixed {
+  top: 0;
+  position: sticky;
+}
 </style>
