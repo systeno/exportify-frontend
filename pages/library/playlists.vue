@@ -4,17 +4,19 @@ import { definePageMeta } from "#imports";
 definePageMeta({
   middleware: 'auth'
 })
+
 const access_token = useState("access_token").value
+
 const { pending, data: playlists } = useLazyFetch("http://localhost:8080/playlist", {
+  server: false,
   headers: {
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${access_token}`
   }
 })
-watch(playlists, (newPlaylists) => {
+/*watch(playlists, (newPlaylists) => {
   refreshNuxtData('playlists')
-})
-
+})*/
 </script>
 
 <script lang="ts">
@@ -26,7 +28,6 @@ export default {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${access_token}`,
-        'Access-Control-Allow-Origin': "*"
       }
     })
     this.playlists = data;
@@ -41,13 +42,14 @@ export default {
       refreshNuxtData('playlists')
     }
   }
-}
-*/
+}*/
+
 </script>
 
 <template>
   <NuxtLayout name="library">
-    <table class="table">
+    <progress v-if="pending" class="progress is-large is-primary" max="100">15%</progress>
+    <table v-else class="table">
       <thead>
       <tr>
         <th>UserId</th>
